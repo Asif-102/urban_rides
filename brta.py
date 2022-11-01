@@ -1,6 +1,6 @@
 import random
 
-class Brta:
+class BRTA:
     def __init__(self):
         self.__license = {}
     
