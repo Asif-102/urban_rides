@@ -4,7 +4,7 @@ class BRTA:
     def __init__(self):
         self.__license = {}
     
-    def driving_test(self, email):
+    def take_driving_test(self, email):
         score = random.randint(0, 100)
         if score >= 33:
             print('congrats, you have passed')
