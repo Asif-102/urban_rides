@@ -13,7 +13,7 @@ class RideManager:
         else:
             self.__available_cng.append(vehicle)
 
-    def match_a_vehicle(self):
+    def find_a_vehicle(self):
         pass
 
 uber = RideManager()
