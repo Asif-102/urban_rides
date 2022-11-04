@@ -74,13 +74,13 @@ class Driver(User):
         if self.valid_driver is True:
             new_vehicle = None
             if vehicle_type == 'car':
-                new_vehicle = Car(vehicle_type, license_plate, rate, self.email)
+                new_vehicle = Car(vehicle_type, license_plate, rate, self)
                 uber.add_a_vehicle(vehicle_type, new_vehicle)
             elif vehicle_type == 'bike':
-                new_vehicle = Bike(vehicle_type, license_plate, rate, self.email)
+                new_vehicle = Bike(vehicle_type, license_plate, rate, self)
                 uber.add_a_vehicle(vehicle_type, new_vehicle)
             else:
-                new_vehicle = Cng(vehicle_type, license_plate, rate, self.email)
+                new_vehicle = Cng(vehicle_type, license_plate, rate, self)
                 uber.add_a_vehicle(vehicle_type, new_vehicle)
         else:
             print('You are not a valid driver')
