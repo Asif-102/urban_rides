@@ -10,6 +10,7 @@ class Vehicle(ABC):
         self.vehicle_type = vehicle_type
         self.rate = rate
         self.driver = driver
+        self.status = 'available'
         self.license_plate = license_plate
         self.speed = self.speed[vehicle_type]
 
