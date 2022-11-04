@@ -1,5 +1,6 @@
 import hashlib
 from brta import BRTA
+from vehicles import Car, Bike, Cng
 
 license_authority = BRTA()
 
@@ -66,6 +67,18 @@ class Driver(User):
         else:
             self.license = result
             self.valid_driver = True
+
+    def register_a_vehicle(self, vehicle_type, license_plate, rate):
+        if self.valid_driver is True:
+            new_vehicle = None
+            if vehicle_type == 'car':
+                new_vehicle = Car(vehicle_type, license_plate, rate, self.email)
+            elif vehicle_type == 'bike':
+                new_vehicle = Bike(vehicle_type, license_plate, rate, self.email)
+            else:
+                new_vehicle = Cng(vehicle_type, license_plate, rate, self.email)
+        else:
+            print('You are not a valid driver')
         
     def start_a_trip(self, destination, fare):
         self.earning += fare
