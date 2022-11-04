@@ -27,9 +27,11 @@ class Car(Vehicle):
         super().__init__(vehicle_type, license_plate, rate, driver)
 
     def start_driving(self):
+        self.status = 'unavailable'
         print(self.vehicle_type, self.license_plate, ' started')
         
     def trip_finished(self):
+        self.status = 'available'
         print(self.vehicle_type, self.license_plate, ' complete trip')
 
 class Bike(Vehicle):
@@ -37,9 +39,11 @@ class Bike(Vehicle):
         super().__init__(vehicle_type, license_plate, rate, driver)
 
     def start_driving(self):
+        self.status = 'unavailable'
         print(self.vehicle_type, self.license_plate, ' started')
         
     def trip_finished(self):
+        self.status = 'available'
         print(self.vehicle_type, self.license_plate, ' complete trip')
 
 class Cng(Vehicle):
@@ -47,7 +51,9 @@ class Cng(Vehicle):
         super().__init__(vehicle_type, license_plate, rate, driver)
 
     def start_driving(self):
+        self.status = 'unavailable'
         print(self.vehicle_type, self.license_plate, ' started')
         
     def trip_finished(self):
+        self.status = 'available'
         print(self.vehicle_type, self.license_plate, ' complete trip')
