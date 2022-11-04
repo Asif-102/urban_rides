@@ -124,3 +124,4 @@ driver4.take_driving_test()
 driver4.register_a_vehicle('car', 4245, 10)
 
 print(uber.get_available_cars())
+uber.find_a_vehicle(rider1, 'car', 90)
